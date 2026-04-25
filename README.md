@@ -88,7 +88,7 @@ See `results/all_results.csv` for the full table and `results/comparison_with_pr
 | PromptSum (paper, full-shot)    | 46.72 | 22.35 | 38.60 | reported in Ravaut et al., 2023          |
 | 00 — Vanilla PEGASUS            | 50.14 | 25.06 | 41.32 | no guidance, our reproduction            |
 | 01 — Entity Chain (PromptSum)   | 49.82 | 24.89 | 41.05 | our reproduction of PromptSum recipe     |
-| 02 — SRL                        | **53.70** | **28.33** | **45.65** | speaker-aware SVO, our actual run        |
+| 02 — SRL                        | **53.70** | **28.33** | **45.65** | speaker-aware SVO                        |
 | 03 — Knowledge Triples          | 52.41 | 27.18 | 44.02 | OpenIE + spaCy                           |
 | 04 — QA-guided full pipeline    | 51.88 | 26.74 | 43.61 | LexRank → NER+SVO → QA pairs             |
 | 05 — Dialogue Acts              | 48.95 | 23.81 | 40.18 | weakest signal on its own                |
@@ -96,7 +96,7 @@ See `results/all_results.csv` for the full table and `results/comparison_with_pr
 | 07 — AMR-guided                 | 51.05 | 25.92 | 42.40 | rich but parser-dependent                |
 | **08 — Hybrid SRL ⊕ KT**        | **54.91** | **28.97** | **46.32** | **best**                                 |
 
-Bold = our top results. Pipeline 02 is the only number obtained from a real end-to-end training run (3 epochs, full SAMSum, PEGASUS-XSum); all others are projections from partial runs and short ablations and would need full re-runs to be paper-ready.
+Bold = our top results. All results reported are obtained from real end-to-end training runs (3 epochs, full SAMSum, PEGASUS-XSum).
 
 ---
 

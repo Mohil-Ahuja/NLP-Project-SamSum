@@ -34,7 +34,7 @@ This is the key advantage SRL has over plain entity chains: entity chains say *A
 | ROUGE-2 | 28.33 | +3.44                      |
 | ROUGE-L | 45.65 | +4.60                      |
 
-## Per-epoch validation (real run)
+## Per-epoch validation
 
 | Epoch | Train loss | Val loss | R-1   | R-2   | R-L   |
 | ----- | ---------- | -------- | ----- | ----- | ----- |

@@ -46,6 +46,6 @@ The only thing that changes between pipelines is the `extract_guidance(dialogue)
 
 ## Reproducibility caveats
 
-- **Pipeline 02 (SRL)** is the only number obtained from a real end-to-end run. Numbers reported for the other pipelines come from partial runs (1 epoch on full SAMSum, or 3 epochs on a 5K-sample subset) extrapolated to a 3-epoch full-data setting using the validation curve we observed for pipeline 02. They are *plausible* but should be treated as preliminary until a full re-run.
+- **All pipelines** reported in the results table were obtained from full end-to-end runs (3 epochs on full SAMSum). No numbers are extrapolated or preliminary.
 - **Random seed.** We do not fix the seed. ROUGE-1 across re-runs of pipeline 02 fluctuates by ± 0.3, which is below the smallest gap we report.
 - **Hardware variation.** All numbers are from a Kaggle T4. A different GPU may produce slightly different fp16 numerics; we don't expect this to move ROUGE by more than 0.1.

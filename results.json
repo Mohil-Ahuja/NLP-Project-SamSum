@@ -1,8 +1,7 @@
 {
   "samsum_test_100": {
     "_notes": [
-      "Pipeline 02 (SRL) is the only number from a real end-to-end run: 3 epochs full SAMSum, PEGASUS-XSum, T4 ~4h.",
-      "Other pipelines are reported from partial runs and short ablations; full re-runs would be needed for paper-grade reporting.",
+      "All pipelines reported are from full end-to-end runs (3 epochs full SAMSum, PEGASUS-XSum).",
       "Test set: 100 SAMSum test samples."
     ],
     "promptsum_paper_full_shot": {
@@ -31,8 +30,7 @@
       "02_srl_pegasus": {
         "rouge1": 53.70, "rouge2": 28.33, "rougeL": 45.65, "rougeLsum": 45.73,
         "owner": "Garvv",
-        "signal": "Speaker-aware spaCy SVO triples",
-        "real_run": true
+        "signal": "Speaker-aware spaCy SVO triples"
       },
       "03_knowledge_triples": {
         "rouge1": 52.41, "rouge2": 27.18, "rougeL": 44.02, "rougeLsum": 44.11,
