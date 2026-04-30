@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local evaluation demonstration scripts
+run_pipeline_demo.py
+run_integrated_evaluation.py
