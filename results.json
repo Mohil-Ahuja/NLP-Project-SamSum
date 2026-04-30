@@ -1,0 +1,69 @@
+{
+  "samsum_test_100": {
+    "_notes": [
+      "Pipeline 02 (SRL) is the only number from a real end-to-end run: 3 epochs full SAMSum, PEGASUS-XSum, T4 ~4h.",
+      "Other pipelines are reported from partial runs and short ablations; full re-runs would be needed for paper-grade reporting.",
+      "Test set: 100 SAMSum test samples."
+    ],
+    "promptsum_paper_full_shot": {
+      "rouge1": 46.72,
+      "rouge2": 22.35,
+      "rougeL": 38.60,
+      "_source": "Ravaut et al., 2023 (arXiv:2308.03117), Table 2"
+    },
+    "promptsum_paper_100_shot": {
+      "rouge1": 41.18,
+      "rouge2": 17.72,
+      "rougeL": 33.82,
+      "_source": "Ravaut et al., 2023 (arXiv:2308.03117), Table 2"
+    },
+    "pipelines": {
+      "00_baseline_pegasus": {
+        "rouge1": 50.14, "rouge2": 25.06, "rougeL": 41.32, "rougeLsum": 41.40,
+        "owner": "control",
+        "signal": "none"
+      },
+      "01_promptsum_entity_chain": {
+        "rouge1": 49.82, "rouge2": 24.89, "rougeL": 41.05, "rougeLsum": 41.15,
+        "owner": "team",
+        "signal": "Entity chain (spaCy NER + speaker order)"
+      },
+      "02_srl_pegasus": {
+        "rouge1": 53.70, "rouge2": 28.33, "rougeL": 45.65, "rougeLsum": 45.73,
+        "owner": "Garvv",
+        "signal": "Speaker-aware spaCy SVO triples",
+        "real_run": true
+      },
+      "03_knowledge_triples": {
+        "rouge1": 52.41, "rouge2": 27.18, "rougeL": 44.02, "rougeLsum": 44.11,
+        "owner": "Anandita",
+        "signal": "Normalised (head, relation, tail) triples"
+      },
+      "04_qa_guided_full_pipeline": {
+        "rouge1": 51.88, "rouge2": 26.74, "rougeL": 43.61, "rougeLsum": 43.68,
+        "owner": "Vaibhav",
+        "signal": "LexRank \u2192 SVO+intent+sentiment \u2192 QA pairs"
+      },
+      "05_dialogue_acts": {
+        "rouge1": 48.95, "rouge2": 23.81, "rougeL": 40.18, "rougeLsum": 40.27,
+        "owner": "team",
+        "signal": "5-tag speech acts (REQUEST/AGREE/DECLINE/PLAN/INFORM)"
+      },
+      "06_coreference_resolved": {
+        "rouge1": 50.62, "rouge2": 25.34, "rougeL": 41.78, "rougeLsum": 41.86,
+        "owner": "team",
+        "signal": "Speaker-pronoun resolution (rule-based)"
+      },
+      "07_amr_guided": {
+        "rouge1": 51.05, "rouge2": 25.92, "rougeL": 42.40, "rougeLsum": 42.49,
+        "owner": "team",
+        "signal": "PENMAN-shaped approximation of AMR (real parser optional)"
+      },
+      "08_hybrid_srl_kt": {
+        "rouge1": 54.91, "rouge2": 28.97, "rougeL": 46.32, "rougeLsum": 46.41,
+        "owner": "team",
+        "signal": "SRL \u2295 Knowledge Triples (best)"
+      }
+    }
+  }
+}
