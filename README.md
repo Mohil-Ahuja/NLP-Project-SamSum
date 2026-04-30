@@ -2,7 +2,7 @@
 
 ## An Ablation Study of Structured Guidance Signals for PEGASUS on SAMSum
 
-**Authors:** Anandita Garg, Mohil Ahuja, Garvv Chadha, Christopher George, Vaibhav Dabas
+**Authors:** Anandita Garg, Mohil Ahuja, Garv Chadha, Christopher George, Vaibhav Dabas
 
 ---
 
