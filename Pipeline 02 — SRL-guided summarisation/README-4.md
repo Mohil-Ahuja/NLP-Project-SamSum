@@ -2,7 +2,6 @@
 
 **Owner:** Garvv
 
-**Status:** This is the only pipeline whose ROUGE numbers come from a real end-to-end run (3 epochs, full SAMSum, T4, ≈ 4 h).
 
 ## What it does
 
